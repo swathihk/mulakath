@@ -1,0 +1,93 @@
+
+    table#listing{
+                        background: none repeat scroll 0 0 #F4F9FE!important;
+                        border-radius: 10px 10px 10px 10px;
+                        padding: 20px;
+
+                        border-collapse: collapse;
+                      }
+
+table#listing tr.tr-head{
+  background: none repeat scroll 0 0 #F4F9FE!important;
+  color: #66A3D3!important;
+  font: bold 1.2em/2em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif!important;
+  text-align: center!important;
+}
+table#listing .tr-head td{
+  border-bottom: 1px solid #E3F1FE;
+  border-left: 1px solid #E5EFF8;
+  border-top: 1px solid #E5EFF8;
+  border-right: 1px solid #E5EFF8;
+  color: #678197;
+  font-weight: normal;
+  padding: 0.3em 0.4em;
+  text-align: left;
+}
+table#listing .tr-odd{
+  background: none repeat scroll 0 0 #F1F6FF;
+  color: #27292B;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 50px;
+  text-align: left;
+}
+table#listing .tr-odd td{
+  border-bottom: 1px solid #E3F1FE;
+  border-left: 1px solid #E5EFF8;
+  border-right: 1px solid #E5EFF8;
+  color: #678197;
+  padding: 0.5em 1em!important;
+  text-align: center;
+  background: #fff;
+}
+table#listing .tr-even{
+  background: none repeat scroll 0 0 #F1F6FF;
+  color: #27292B;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 50px;
+  text-align: left;
+}
+table#listing .tr-even td{
+  border-bottom: 1px solid #E3F1FE;
+  border-left: 1px solid #E5EFF8;
+  border-right: 1px solid #E5EFF8;
+  color: #678197;
+  padding: 0.5em 1em!important;
+  text-align: center;
+  background: #fff!important;
+}
+table#listing .tr-read-odd{
+  background: #fff;
+  text-align:left;
+  padding:50px;
+  color:#27292b;
+  font-weight:normal;
+  font-size:14px;
+}
+table#listing .tr-read-even{
+  background: #f1f6ff;
+  text-align:left;
+  padding:50px;
+  color:#27292b;
+  font-weight:normal;
+  font-size:14px;
+}
+/*th {
+border-bottom: 1px solid #E3F1FE;
+border-left: 1px solid #E5EFF8;
+color: #678197;
+font-weight: normal;
+padding: 0.3em 1em;
+text-align: left;
+border-right: 1px solid #E5EFF8;
+border-top: 1px solid #E5EFF8;*/
+/*}*/
+table#listing td a{
+  color: #678197!important;
+  text-decoration: none!important;
+}
+table#listing td a:hover{
+  color: #678197!important;
+  text-decoration: none!important;
+}

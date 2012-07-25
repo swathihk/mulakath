@@ -1,0 +1,13 @@
+
+
+<div style="width:471px;height:auto;margin: 0px auto;">
+      <br/>
+<%=form_for :post,:url=>{:action=>'create'} do |n|  %>
+    <%= n.text_area :description ,:rows=>2,:cols=>64,:class=>'input_text_area'%>
+    <%= n.hidden_field :user_id,:value=>session[:user_id] %> <br/> <br/>
+    <%= n.submit "post",:class=>'button2' %>
+<% end %>
+</div>
+<div id="chat">
+  <%= render :partial => "chats"%>
+</div>

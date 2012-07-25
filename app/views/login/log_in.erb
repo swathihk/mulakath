@@ -1,0 +1,14 @@
+<div id="login-cont">
+  <div class="signin-wrapper" data-login-message="">
+  <h1>Login To Mulaqath</h1>
+  <%=form_for :login do |log|%>
+      <div style="margin-bottom: 15px;"><div style="width:120px;float: left;">Email</div><%=log.text_field :email%>  </div>
+      <div><div style="width:120px;float: left;">Password</div><%=log.password_field :password%></div>  <br/>
+      <%=log.hidden_field :status,:value=>@status_id%>
+
+      <%=log.submit "Login",:class=>"button1"%>
+  <%end%>
+
+
+    </div>
+</div>

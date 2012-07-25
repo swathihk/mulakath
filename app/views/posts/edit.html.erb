@@ -1,0 +1,14 @@
+
+<h2 align= "center">
+  <%=form_for(@post) do |n|  %>
+<%=n.label 'name'%>
+<%= n.text_field 'name'%><br /><br />
+<%=n.label 'title'%>
+<%= n.text_field 'title'%><br /><br />
+<%= n.label 'description'%>
+<%= n.text_field 'description' %><br /><br />
+<%= n.submit %>
+<% end %>
+<%= link_to 'show', @post %>
+<%=link_to "Back" ,:controller=>'posts',:action=> 'new'%>
+</h2>

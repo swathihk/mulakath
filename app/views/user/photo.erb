@@ -1,0 +1,16 @@
+<br/>
+<br/>
+<br/>
+<%= form_for :album do |f| %>
+    <h4>
+      &nbsp;&nbsp;&nbsp;&nbsp; <label>My Avatar</label>
+      <%#= f.file_field :image %>
+      <%= f.file_field :avatar %>
+      <%= f.hidden_field :avatar_cache %>
+      <br/>
+      <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;Set As Profile Pic <%= f.radio_button :profile_picture, true  %> Yes
+      <%= f.radio_button :profile_picture, false ,:checked=>true %> No
+    </h4>
+    <%=f.submit "Upload Photo"%>
+<% end %>

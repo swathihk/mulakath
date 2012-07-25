@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Mulakath</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag :defaults, "jquery-1.5.2.min.js", "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= yield %>
+  <div id="container">
+  <div id="header">
+    <div style="position: absolute;margin-left: 20px;">
+      <img src="../images/mulaqath.jpg"style="width:152px;height:56px;"alt="some_text"/>
+    </div>
+    <div style="float:right;margin-right: 100px;">
+         <% if session[:user_id].nil? %>
+          <%=link_to "Login", :action=>"log_in"%>
+          <%=link_to "SignUp", :action=>"sign_up"%>
+             <% else %>
+      <%=link_to"logout",:controller=>'login',:action=>'logout',:id=>session[:user_id] %>
+
+    <%=link_to"Settings",:controller=>'settings',:action=>'index' %>
+          <% end %>
+      </div>
+  </div>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<div style="margin:0px auto;width: 100%;">
+
+  <% @posts.each do |post| %>
+      <%=form_for :comment,:url=>{:id=>post.id,:action=>'comment'} do |com|%>
+          <li>
+            <div class="post_div">
+
+              <%@post_user=Users.find_by_id(post.user_id) %>
+              <%unless @post_user.nil? %>
+                  <h4 class="poster">
+                    <%=link_to @post_user.username,:controller=>'user',:action => 'member_profile',:id=>@post_user.id %> </h4>
+                  <small><%= post.description %></small>
+              <% end %>
+              <div style="margin-top: 10px;">
+                <%=com.text_area :message,:rows=>1 %>
+                <%=com.hidden_field :post_id,:value=>post.id %>  <br/>
+                <%=com.hidden_field :users_id,:value=>session[:user_id] %>
+                <%=com.submit "comment"%>
+              </div>
+              <div style="float:right;">
+                <small><%= link_to 'show old comments', post %>
+                  &nbsp;<%#= link_to 'Edit comments' , edit_post_path(post) %></small>
+              </div>
+              <div id="comments_list">
+                <% @comme=Comment.where(:post_id=>post.id).order("created_at DESC").limit(3) %>
+                <% unless @comme.nil? %>
+                    <% @comme.each do |comme| %>
+                        <%@commenter=Users.find_by_id(comme.users_id) %>
+                        <%unless @commenter.nil?%>
+                            <div id="comments">
+                              <h4><%=link_to @commenter.username ,:controller=>'user',:action => 'member_profile',:id=>@commenter.id%> </h4>
+                        <% end %>
+                        <br/>
+                        &nbsp;&nbsp;&nbsp;<%= comme.message %><br/>
+                        </div>
+                    <% end %>
+                <% end %>
+              </div>
+            </div>
+          </li>
+      <% end %>
+
+  <% end %>
+
+
+</div>

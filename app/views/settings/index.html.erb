@@ -1,0 +1,16 @@
+<br/>     <br/><br/>
+hii
+
+
+<%=form_for :setting do |sett|%>
+    <%=sett.hidden_field :user_id,:value=>'session[:user_id]'%>   <br/>
+
+    level of security:<%=sett.select :security_level,["Post","Comments"]%>     <br/>
+
+
+    <% @members.each do |member| %>
+    <%=sett.check_box "username#{member.id}"%> <%= member.username %>     <br/>
+        <% end %>
+    <br/>
+    <%=sett.submit "submit"%>
+<%end%>

@@ -1,0 +1,217 @@
+body{
+    font-family: "Helvetica Neue",Arial,sans-serif;
+}
+table#listing{
+    background: none repeat scroll 0 0 #F4F9FE!important;
+    border-radius: 10px 10px 10px 10px;
+    padding: 20px;
+
+    border-collapse: collapse;
+}
+
+table#listing tr.tr-head{
+    background: none repeat scroll 0 0 #F4F9FE!important;
+    color: #66A3D3!important;
+    font: bold 1.2em/2em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif!important;
+    text-align: center!important;
+}
+table#listing .tr-head td{
+    border-bottom: 1px solid #E3F1FE;
+    border-left: 1px solid #E5EFF8;
+    border-top: 1px solid #E5EFF8;
+    border-right: 1px solid #E5EFF8;
+    color: #678197;
+    font-weight: normal;
+    padding: 0.3em 0.4em;
+    text-align: left;
+}
+table#listing .tr-odd{
+    background: none repeat scroll 0 0 #F1F6FF;
+    color: #27292B;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 50px;
+    text-align: left;
+}
+table#listing .tr-odd td{
+    border-bottom: 1px solid #E3F1FE;
+    border-left: 1px solid #E5EFF8;
+    border-right: 1px solid #E5EFF8;
+    color: #678197;
+    padding: 0.5em 1em!important;
+    text-align: center;
+    background: #fff;
+}
+table#listing .tr-even{
+    background: none repeat scroll 0 0 #F1F6FF;
+    color: #27292B;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 50px;
+    text-align: left;
+}
+table#listing .tr-even td{
+    border-bottom: 1px solid #E3F1FE;
+    border-left: 1px solid #E5EFF8;
+    border-right: 1px solid #E5EFF8;
+    color: #678197;
+    padding: 0.5em 1em!important;
+    text-align: center;
+    background: #fff!important;
+}
+table#listing .tr-read-odd{
+    background: #fff;
+    text-align:left;
+    padding:50px;
+    color:#27292b;
+    font-weight:normal;
+    font-size:14px;
+}
+table#listing .tr-read-even{
+    background: #f1f6ff;
+    text-align:left;
+    padding:50px;
+    color:#27292b;
+    font-weight:normal;
+    font-size:14px;
+}
+/*th {
+border-bottom: 1px solid #E3F1FE;
+border-left: 1px solid #E5EFF8;
+color: #678197;
+font-weight: normal;
+padding: 0.3em 1em;
+text-align: left;
+border-right: 1px solid #E5EFF8;
+border-top: 1px solid #E5EFF8;*/
+/*}*/
+table#listing td a{
+    color: #678197!important;
+    text-decoration: none!important;
+}
+table#listing td a:hover{
+    color: #678197!important;
+    text-decoration: none!important;
+}
+#header{
+    background-color: #252525;
+    height: 56px;
+    width: 100%;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+
+}
+#header a{
+    color: #BBBBBB;
+    font-size: 12px;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+    line-height: 3em;
+    padding: 10px;
+}
+#container{
+    margin: 0px auto;
+    height:auto;
+    min-height: 600px;
+    width: 100%;
+    min-height: 500px;
+
+
+}
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 36px 77px 22px;
+    text-align: center;
+}
+#login-cont {
+    margin: 0 auto;
+    position: relative;
+    width: 835px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 225px rgba(255, 255, 255, 0.55);
+    border-radius: 6px 6px 6px 6px;
+    margin-top: 30px;
+}
+.signin-wrapper, .signup-wrapper {
+    margin: 0 auto 10px;
+}
+.signin-wrapper, .signup-wrapper, .resend-password-wrapper, .mobile-complete-wrapper
+{clear: both;
+    display: block;
+    width: 585px;
+}
+input, textarea {
+    -moz-transition: background 0.2s linear 0s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) inset, 0 1px 0 rgba(255, 255, 255, 0.075);
+    margin-left: 20px;
+}
+.button1{
+    background-color: #019AD2;
+    background-image: -moz-linear-gradient(#33BCEF, #019AD2);
+    background-repeat: repeat-x;
+    border-color: #057ED0;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 18px;
+    overflow: visible;
+    padding: 5px 10px;
+    position: relative;
+    margin-left: 170px;
+}
+
+#signup_block{
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 600px;
+    margin: 0px auto;
+    margin-top: 100px;
+}
+h2{
+    color: #333333;
+    font-weight: 500;
+    text-align: center;
+}
+#chat_box{
+    border: 1px solid #ccc;
+    float:right;
+    height:auto;
+    width:300px;
+    margin-top: 70px;
+    position: relative;
+    margin-bottom: 10px;
+    line-height: 2em;
+}
+#available{
+    display: block;
+    padding-top: 20px;
+}
+#available li{
+    margin-left: 30px;
+}
+#content{
+    min-height: 200px;
+    float: left;
+    margin-bottom: 30px;
+    margin-top: 200px;
+}
+#user{
+    height:200px;
+    width: 100%;
+    border-bottom:1px solid #CE3927;
+    position: fixed;
+    z-index: 1;
+}

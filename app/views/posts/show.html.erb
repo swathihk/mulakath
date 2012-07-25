@@ -1,0 +1,23 @@
+
+<div class="post_div" style="color:black;">
+
+       <%@usr= Users.find(@post.user_id) %>
+  <h4 class="poster"><%=@usr.username %></h4> </br>
+  <h3 style="margin-left: 50px;"><%= @post.description %></h3>
+    </div>
+
+<div id="fetch"><%= render :partial => "comment"%></div>
+
+<!--<h3>Add a comment:</h3>
+<%#= form_tag(comment_post_path(@post),:method => 'post') do %>
+:commenter
+<%#= text_field_tag "comment[commenter]" %>
+:message
+<%#= text_area_tag "comment[message]" %>
+
+
+<div id="comment"><%#= button_tag "comment", :id=>"comment_tag"%></div>
+<%#end %>-->
+
+<%#= link_to 'Edit', edit_post_path(@post) %> |
+<%#= link_to 'Back' ,:controller => 'posts', :action=> 'index' %>

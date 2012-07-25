@@ -1,0 +1,23 @@
+
+
+  <div style="border:1px solid #BFEBFB;padding: 15px;margin: 1px;">
+    <b>Username</b>&nbsp;:<span style="padding: 40px;"><%= @current_user_id.username %> </span>
+  </div>
+  <div style="border:1px solid #BFEBFB;padding: 15px;margin: 1px;">
+    <b>E-mail&nbsp;&nbsp;&nbsp;</b>:<span style="padding: 40px;"><%= @current_user_id.email %> </span>
+  </div>
+  <div style="border:1px solid #BFEBFB;padding: 15px;margin: 1px;">
+    <b>Date of birth&nbsp;</b>:<span style="padding: 40px;"><%= @current_user_id.date_of_birth %> </span>
+  </div>
+  <%@albums=Album.find_all_by_users_id_and_profile_picture(@current_user_id,false)%>
+  <%unless @albums.nil?%>
+  <%#if (@albums.avatar).blank? %>
+       no image
+
+      <%#else%>
+      <%for album in @albums%>
+      <%= image_tag album.avatar_url  %>
+          <%end%>
+  <%end%>
+    <%#end%>
+  <%=link_to "profile image",:controller=>"user", :action=>"photo"%>

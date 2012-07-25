@@ -1,0 +1,12 @@
+
+<%=form_for(@post) do |n|  %>
+<%=n.label 'name'%>
+<%= n.text_field 'name'%><br /><br />
+<%=n.label 'title'%>
+<%= n.text_field 'title'%><br /><br />
+<%= n.label 'description'%>
+<%= n.text_field 'description' %>
+    <%= n.hidden_field 'user_id',:value=>session[:user_id] %>
+<%= n.submit %>
+<% end %>
+<%=link_to "Back" ,:controller=>'posts',:action=> 'index'%>

@@ -1,0 +1,25 @@
+  <table id="listing"style="margin-left: 100px;">
+    <tr class="tr-head">
+      <td>
+        commenter:
+      </td>
+      <td>
+        Message
+      </td>
+    </tr>
+    <% @post.comments.each do |comment| %>
+    <tr class="tr-even">
+      <%@user_name=Users.find(comment.id) %>
+      <td><%=@user_name.username %></td>
+      <td><%= comment.message %></td>
+      <td><%= link_to"delete",:action=>'delete',:id=>comment.id %> </td>
+      <% #logger.info"aja aja #{comment.id.inspect}" %>
+    </tr>
+    <% end %>
+  </table>
+
+
+
+
+
+

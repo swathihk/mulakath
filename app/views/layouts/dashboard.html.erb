@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+  <title>Mulaqath</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag :defaults, "jquery.js", "application" %>
+  <%= csrf_meta_tags %>
+
+  <%= javascript_include_tag 'jquery-1.7.2 ' %>
+
+  <script type="text/javascript">
+
+      $(document).ready(function(){
+          $("button").click(function(){
+              $("#chat_view").slideToggle();
+          });
+      });
+  </script>
+</head>
+<body>
+
+ <div id="container">
+    <div id="header">
+     <div style="position: absolute;margin-left: 20px;">
+      <img src="../images/mulaqath.jpg"style="width:152px;height:56px;"alt="some_text"/>
+
+     </div>
+      <div style="float: left;margin-left: 200px;">
+        <% @cur_user=Users.find_by_id(session[:user_id]) %>
+        <h4 style="float: right;color:#FFF;">&nbsp;&nbsp;&nbsp;<%=@cur_user.username %> </h4>
+      </div>
+      <div style="float:right;margin-right: 100px;">
+      <% if session[:user_id].nil? %>
+          <%=link_to "Login", :action=>"log_in"%>
+          <%=link_to "SignUp", :action=>"sign_up"%>
+      <% else %>
+             <%=link_to"Home",:controller=>'posts',:action=>'index'%>
+            <%=link_to"Profile",:controller=>'user',:action=>'profile' %>
+            <%=link_to"Settings",:controller=>'settings',:action=>'index' %>
+            <%=link_to"Logout",:controller=>'login',:action=>'logout',:id=>session[:user_id] %>
+
+      <% end %>
+      </div>
+    </div>
+       <div id="user">
+         <div style="margin-top:43px;height:120px;width:130px;">
+         <% @cur_user=Users.find_by_id(session[:user_id]) %>
+         <%@profile_img=Album.find_by_users_id_and_profile_picture(@cur_user.id,true) %>
+             <%unless @profile_img.nil?%>
+           <%= image_tag @profile_img.avatar %>
+               <%end%>
+       </div>
+       </div>
+   <div id="left_box">
+
+   </div>
+       <div id="content">
+
+       <%= yield %>
+
+     </div>
+
+   <div id="chat_box">
+     <button>click to hide </button>
+     <%@active_users= Users.find_all_by_status(true) %>
+     <div id="chat_view" >
+       <% unless @active_users.nil? %>
+     <% @active_users.each do |active| %>
+               <% if active.id==session[:user_id] %>
+               <%#= active.username %>
+               <% else %>
+           <%=link_to active.username,:controller=>'user',:action => 'member_profile',:id=>active %><br/>
+                  <% end %>
+     <% end %>
+           <% end %>
+     </div>
+
+   </div>
+
+ </div>
+
+</body>
+</html>
